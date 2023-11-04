@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Module>
+	
+	<GlobalSolutionName>ThirdParty</GlobalSolutionName>
+	<GlobalNamespace>potato</GlobalNamespace>
+
+	<StaticLibrary>
+		<Name>thirdparty_bz2</Name>
+		<SourceRoot>.</SourceRoot>
+		<ThirdParty>true</ThirdParty>
+		<GlobalPreprocessorDefines>BZ_LCCWIN32</GlobalPreprocessorDefines>
+		<ExportedIncludeDirectory>.</ExportedIncludeDirectory>
+		<ThirdPartySourceFile>
+			blocksort.c;
+			bzlib.c;
+			compress.c;
+			crctable.c;
+			decompress.c;
+			huffman.c;
+			randtable.c
+		</ThirdPartySourceFile>
+	</StaticLibrary>
+
+</Module>
