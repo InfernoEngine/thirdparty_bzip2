@@ -84,6 +84,16 @@ typedef
 #   ifndef WINAPI
 #   define WINAPI
 #   endif
+#   ifdef BZ_SHARED_LIB
+#   ifdef BZ_SHARED_LIB_EXPORT
+#   define BZ_API(func) WINAPI func
+#   define BZ_EXTERN extern __declspec(dllexport)
+#   else
+   /* import windows dll dynamically */
+#   define BZ_API(func) (WINAPI * func)
+#   define BZ_EXTERN __declspec(dllimport)
+#   endif
+#else
 #   ifdef BZ_EXPORT
 #   define BZ_API(func) WINAPI func
 #   define BZ_EXTERN extern
@@ -92,6 +102,7 @@ typedef
 #   define BZ_API(func) (WINAPI * func)
 #   define BZ_EXTERN
 #   endif
+#endif
 #else
 #   define BZ_API(func) func
 #endif

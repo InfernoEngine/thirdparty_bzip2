@@ -10,6 +10,8 @@
 		<ThirdParty>true</ThirdParty>
 		<GlobalPreprocessorDefines>BZ_LCCWIN32</GlobalPreprocessorDefines>
 		<ExportedIncludeDirectory>.</ExportedIncludeDirectory>
+		<ThirdPartySharedGlobalExportDefine>BZ_SHARED_LIB</ThirdPartySharedGlobalExportDefine>
+		<ThirdPartySharedLocalBuildDefine>BZ_SHARED_LIB_EXPORT</ThirdPartySharedLocalBuildDefine>
 		<ThirdPartySourceFile>
 			blocksort.c;
 			bzlib.c;
